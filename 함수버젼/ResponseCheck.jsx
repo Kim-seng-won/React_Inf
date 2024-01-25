@@ -51,7 +51,7 @@ function ResponseCheck(){
         <>
         <div id = "screen"
         className={state}
-        onClick={onClickScreen}>
+        onClick={()=>onClickScreen()}>
             {message}
         </div>
         {renderAvg()}

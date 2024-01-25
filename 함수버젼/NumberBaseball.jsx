@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from 'react';
-import Try from './Try.jsx';
+import Try from '../Try.jsx';
 import { render } from 'react-dom';
 
 function getNumbers() { // 숫자 네 개를 겹치지 않고 랜덤하게 뽑는 함수
