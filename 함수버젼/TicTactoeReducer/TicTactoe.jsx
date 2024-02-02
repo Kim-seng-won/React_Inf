@@ -1,7 +1,7 @@
 import React, {useState, useReducer, useCallback, useEffect} from "react";
 import Table from "./Table";
 
-const initialState = {
+const initialState = { //초기값을 객체로 넣어준다.
     winner : '',
     turn : 'O',
     tableData : [
@@ -63,7 +63,7 @@ const TicTactoe = () =>{
     // const [tableData, setTableData] = useState(['','',''],['','',''],['','','']);
 
     const onClickTable = useCallback(()=>{
-        dispatch({type: 'SET_WINNER',winner : turn }) //dispatch가 그 안의 action을 실행한다.
+        dispatch({type: 'SET_WINNER',winner : turn })  //dispatch를 통해 action을 실행한다.
     },[state.winner]);
 
     useEffect(()=>{
@@ -109,7 +109,7 @@ const TicTactoe = () =>{
     return(
         <>
         <Table onClick = {onClickTable} tableData = {tableData} dispatch={dispatch}/>
-        {state.winner && <div>{state.winner}님의 승리</div>}
+        {state.winner && <div>{state.winner}님의 승리</div>} //state.winner의 값이 존재한다면 && 으로 뒤의 값을 실행한다.
         </>
     );
 }
